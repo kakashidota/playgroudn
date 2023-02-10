@@ -1,0 +1,86 @@
+﻿@page
+@model NiceLIA.Pages.Feed.DashboardModel
+@{
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>Data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6 mx-auto">
+            <div class="card">
+                <div class="card-header">Feed</div>
+                <div class="card-body">
+                    <!-- Your feed content goes here -->
+                    @foreach (var post in Model.Posts)
+                    {
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="https://via.placeholder.com/150x150"
+                                 class="rounded-circle mx-auto d-block mt-3"
+                                 alt="Profile Image" />
+                                <h5 class="text-center mt-3">Jane Doe</h5>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Jane Doe shared a post
+                                        </h5>
+                                        <p class="card-text">
+                                            @post["content"]
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="row mt-5">
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-9">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="postContent"
+                                              rows="3"
+                                              placeholder="What's on your mind?"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Post</button>
+                            </form>
+                        </div>
+                    </div>,
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="card">
+                <div class="card-header">User Stats</div>
+                <div class="card-body">
+                    <!-- Your user stats content goes here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+</div>
+
+
